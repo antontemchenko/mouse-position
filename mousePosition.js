@@ -6,12 +6,12 @@ var height = $(document).height();
 $(document).mousemove(function(e) {
     x = e.pageX;
     y = e.pageY;
-    percent();
+    deg();
 });
 
-function percent(){
-	var horizontal =  Math.round(x*100/width);
-	var vertical = Math.round(y*100/height);
+function deg(){
+	var horizontal =  Math.round(x*180/width);
+	var vertical = Math.round(y*180/height);
 	console.log("horizontal:" + horizontal);
 	console.log("vertical:" + vertical);
 }
