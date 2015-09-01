@@ -1,6 +1,17 @@
+var x;
+var y;
+var width = $(document).width();
+var height = $(document).height();
+
 $(document).mousemove(function(e) {
-    var x = e.pageX;
-    var y = e.pageY;
-console.log("X: " + x);
-console.log("Y: " + y);
+    x = e.pageX;
+    y = e.pageY;
+    percent();
 });
+
+function percent(){
+	var horizontal =  Math.round(x*100/width);
+	var vertical = Math.round(y*100/height);
+	console.log("horizontal:" + horizontal);
+	console.log("vertical:" + vertical);
+}
